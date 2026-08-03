@@ -1,0 +1,41 @@
+# Nexus Link Unity Habitat Slice — .gitignore
+# Unity 6000.5.6f1 (0e0577a1a2ac) / URP 17.5.0
+#
+# Tracked on purpose: Assets/ Packages/ ProjectSettings/
+# Everything below is Unity-generated, IDE-generated or build output.
+
+# ---- Unity generated ----
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+ExportedObj/
+
+# ---- IDE / toolchain ----
+.vs/
+.vscode/
+.gradle/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ---- Crash / OS noise ----
+sysinfo.txt
+*.stackdump
+crashlytics-build.properties
+.DS_Store
+Thumbs.db
