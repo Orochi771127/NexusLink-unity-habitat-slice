@@ -1,0 +1,498 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b49f63e7fd93b48babdac519f13ea4, type: 3}
+  m_Name: greyshade-cat_AnimationSet
+  m_EditorClassIdentifier: Assembly-CSharp::NexusLink.Moonlake.HeroSlice.MoonlakeCharacterAnimationSet
+  characterId: greyshade-cat
+  masterFrameSize: 512
+  clips:
+  - animationId: attack_basic
+    category: battle
+    frames:
+    - {fileID: -2060496603, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    - {fileID: -155620248, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    - {fileID: 667244133, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    - {fileID: 1246244923, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    - {fileID: -1424172005, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    - {fileID: -230552098, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    - {fileID: 1440721039, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    - {fileID: -1532639019, guid: 30e0a2004b6cd664792e11cf56d82ad1, type: 3}
+    fps: 8
+    loop: 0
+  - animationId: defeated
+    category: battle
+    frames:
+    - {fileID: 1563946543, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    - {fileID: 1492735370, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    - {fileID: -899421315, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    - {fileID: 803705933, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    - {fileID: 993729598, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    - {fileID: 1993459800, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    - {fileID: -815367103, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    - {fileID: -483382010, guid: 3a0125bb915117c4b83e38f1913418cb, type: 3}
+    fps: 4
+    loop: 0
+  - animationId: defend
+    category: battle
+    frames:
+    - {fileID: 1988956381, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    - {fileID: -684737026, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    - {fileID: -1863893927, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    - {fileID: 24661331, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    - {fileID: 641356397, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    - {fileID: -1809697444, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    - {fileID: 2119900236, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    - {fileID: 1931302521, guid: 2059dec1ade1ab24cbb620e458a8337e, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: hit
+    category: battle
+    frames:
+    - {fileID: -1322669960, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    - {fileID: 2041488217, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    - {fileID: -1635192091, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    - {fileID: 1939255126, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    - {fileID: 245594040, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    - {fileID: -1597170339, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    - {fileID: 1667094649, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    - {fileID: -700175206, guid: 2f326668c049e094a995b3812182110e, type: 3}
+    fps: 8
+    loop: 0
+  - animationId: skill_cast
+    category: battle
+    frames:
+    - {fileID: 2100926531, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    - {fileID: -1235014932, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    - {fileID: 956149392, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    - {fileID: -1438700859, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    - {fileID: -1831315409, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    - {fileID: -1399431926, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    - {fileID: -1093414434, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    - {fileID: -1583657479, guid: 326faeccaa4fa6d4d82b806f0b2e110e, type: 3}
+    fps: 8
+    loop: 0
+  - animationId: victory
+    category: battle
+    frames:
+    - {fileID: -885826224, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    - {fileID: 1103825143, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    - {fileID: 1258680267, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    - {fileID: 817246565, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    - {fileID: -952301448, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    - {fileID: -709752761, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    - {fileID: -1485694567, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    - {fileID: -832612136, guid: c8cb0cb8116f0884496bc85be7d296f0, type: 3}
+    fps: 3
+    loop: 0
+  - animationId: idle_dance
+    category: daily
+    frames:
+    - {fileID: 923780567, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: 688067464, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -1201595924, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: 1105599956, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -165470642, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: 1366377095, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -683557407, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -1657937741, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    fps: 5
+    loop: 1
+  - animationId: idle_wash
+    category: daily
+    frames:
+    - {fileID: -1093496468, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: 98584269, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -1910416025, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -1598541855, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -45357665, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -191912549, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -552745566, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -903770529, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    fps: 4
+    loop: 1
+  - animationId: sit
+    category: daily
+    frames:
+    - {fileID: 2100928448, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    - {fileID: -1628380214, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    - {fileID: -884434483, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    - {fileID: -596555448, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    - {fileID: -2111849845, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    - {fileID: 1874019512, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    - {fileID: 63012956, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    - {fileID: 258864515, guid: 19269b1a248d74040aee8421c4eb7070, type: 3}
+    fps: 4
+    loop: 1
+  - animationId: sleep
+    category: daily
+    frames:
+    - {fileID: -1061213509, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    - {fileID: -1547495734, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    - {fileID: -439532159, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    - {fileID: 902780532, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    - {fileID: -2007860993, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    - {fileID: -746216534, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    - {fileID: 1967976809, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    - {fileID: 2120510789, guid: 36c352035abe90b46977bca26cea9155, type: 3}
+    fps: 3
+    loop: 1
+  - animationId: special_dance
+    category: daily
+    frames:
+    - {fileID: -518785084, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -105877482, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -661175886, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: 593194562, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -207724626, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -215800415, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -1698469409, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    - {fileID: -1415152819, guid: a86b86015fedf69448cc6247926711cb, type: 3}
+    fps: 5
+    loop: 1
+  - animationId: special_wash
+    category: daily
+    frames:
+    - {fileID: 1763942164, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: 1636942004, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: 1482405180, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -599221661, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -424043847, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -1090336372, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: -1265896979, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    - {fileID: 221479687, guid: f9dae0508d7beff49a5e43b7630320f0, type: 3}
+    fps: 4
+    loop: 0
+  - animationId: blink
+    category: emotion
+    frames:
+    - {fileID: -896314117, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    - {fileID: 1563534311, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    - {fileID: 1776450269, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    - {fileID: -631964403, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    - {fileID: -2057320415, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    - {fileID: 1907276337, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    - {fileID: 359357566, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    - {fileID: -1530860402, guid: 2d8e363db788fcc47a0a746110a68b00, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: idle_angry
+    category: emotion
+    frames:
+    - {fileID: -809054965, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: -2100740243, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 483523878, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 938992739, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: -1360377340, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 2077034467, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 1560297668, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 2021191149, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    fps: 4
+    loop: 1
+  - animationId: idle_calm
+    category: emotion
+    frames:
+    - {fileID: 47364468, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    - {fileID: 198242515, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    - {fileID: -291159775, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    - {fileID: -966124181, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    - {fileID: -238302872, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    - {fileID: 46903815, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    - {fileID: -1251525708, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    - {fileID: -271389139, guid: 3efe7e2834826b84ca255cd601041c27, type: 3}
+    fps: 3
+    loop: 1
+  - animationId: idle_defensive
+    category: emotion
+    frames:
+    - {fileID: 1587860211, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    - {fileID: 1902876473, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    - {fileID: 1965278984, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    - {fileID: 511204580, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    - {fileID: -1780706468, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    - {fileID: 584615404, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    - {fileID: 1851236564, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    - {fileID: 800354405, guid: 82295a9f492255042a2eeb3a97e6aeb5, type: 3}
+    fps: 4
+    loop: 1
+  - animationId: idle_distant
+    category: emotion
+    frames:
+    - {fileID: -1521257324, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    - {fileID: 1728634, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    - {fileID: -1537535812, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    - {fileID: 1668943620, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    - {fileID: -870376946, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    - {fileID: -1667594359, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    - {fileID: -878844821, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    - {fileID: 1973184137, guid: 869e162a769781540b5a37d9ee02b7a0, type: 3}
+    fps: 3
+    loop: 1
+  - animationId: idle_enjoy
+    category: emotion
+    frames:
+    - {fileID: -335348015, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -1286820258, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -1872086708, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: 817492560, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -1557759134, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: 190435529, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -2025690424, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -2071129677, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    fps: 3
+    loop: 1
+  - animationId: idle_happy
+    category: emotion
+    frames:
+    - {fileID: 1881480644, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -305887758, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -237139663, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -237465188, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -1563530689, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: 783133951, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: 92153618, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    - {fileID: -1385397163, guid: ebc27a639c3eeee4fbdc4de34d1b6dd7, type: 3}
+    fps: 3
+    loop: 1
+  - animationId: idle_sad
+    category: emotion
+    frames:
+    - {fileID: -1168774278, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -1995780929, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -1716950184, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 1309976881, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 91236598, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 250323615, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 907730201, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 1765466248, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    fps: 3
+    loop: 1
+  - animationId: idle_sick
+    category: emotion
+    frames:
+    - {fileID: 188987321, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 1477994658, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 2055102515, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -1539637403, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -1310897050, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 278659376, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -59281258, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -393139342, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    fps: 3
+    loop: 1
+  - animationId: idle_wake
+    category: emotion
+    frames:
+    - {fileID: -1166568999, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -1389861045, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -1815743202, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: 1401610932, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -863274193, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: 1459515328, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -2075961998, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: 702185756, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: special_angry
+    category: emotion
+    frames:
+    - {fileID: 1443008064, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 1642537464, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 1999934523, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: -797808172, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: -873582442, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 2017550567, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: -1623952075, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    - {fileID: 1742658919, guid: 6b63782ce6fb16241987d60e8da97530, type: 3}
+    fps: 4
+    loop: 0
+  - animationId: special_sad
+    category: emotion
+    frames:
+    - {fileID: -806740274, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -1490192685, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -1811526136, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: -739046110, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 215875235, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 698112802, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 1838452527, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    - {fileID: 1082424015, guid: d501b2d7f7f290a4b80a7bd29d7002d1, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: special_wake
+    category: emotion
+    frames:
+    - {fileID: 483401481, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -981177532, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: 1343814922, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -518097325, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -1523508164, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: 1574738840, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -194854544, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    - {fileID: -503991001, guid: d96419f0767e1b3459f09bda5ce54505, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: fishing_back
+    category: habitat
+    frames:
+    - {fileID: -693085125, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    - {fileID: 1158035182, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    - {fileID: 1828889156, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    - {fileID: 1881964366, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    - {fileID: -2029955146, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    - {fileID: 400494826, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    - {fileID: 1610137508, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    - {fileID: 743482964, guid: 20667e903c8092c43833529d722862a3, type: 3}
+    fps: 6
+    loop: 1
+  - animationId: fishing_front
+    category: habitat
+    frames:
+    - {fileID: -1433855931, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    - {fileID: -1708440124, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    - {fileID: -691790668, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    - {fileID: 952318784, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    - {fileID: -1371732278, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    - {fileID: -1839292214, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    - {fileID: -443266481, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    - {fileID: -462538700, guid: 4ecdb322240c4fb41b3254e842412769, type: 3}
+    fps: 6
+    loop: 1
+  - animationId: fishing_side
+    category: habitat
+    frames:
+    - {fileID: -2118599332, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    - {fileID: -1456679763, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    - {fileID: 1974137809, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    - {fileID: -12387052, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    - {fileID: -1051235291, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    - {fileID: -262528485, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    - {fileID: 250198795, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    - {fileID: 1420847971, guid: 3663d0a872748f54794dc72b8ccaca6d, type: 3}
+    fps: 6
+    loop: 1
+  - animationId: back_walk
+    category: movement
+    frames:
+    - {fileID: -2130120371, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    - {fileID: -1549854015, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    - {fileID: -1133437668, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    - {fileID: -1654501616, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    - {fileID: 1921807349, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    - {fileID: 864550407, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    - {fileID: -1061440534, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    - {fileID: -1706083453, guid: 4b4f176dfe2bdc34ab5634ddf06ad5a7, type: 3}
+    fps: 1
+    loop: 1
+  - animationId: front_walk
+    category: movement
+    frames:
+    - {fileID: 97703760, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    - {fileID: -675798903, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    - {fileID: 1158273729, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    - {fileID: -1977393182, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    - {fileID: -184188278, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    - {fileID: 2108672380, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    - {fileID: 1716563157, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    - {fileID: 1143817617, guid: 68b7592b4b7616d4e9b73d2efc520a91, type: 3}
+    fps: 1
+    loop: 1
+  - animationId: left_walk
+    category: movement
+    frames:
+    - {fileID: 1725211850, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: -682330543, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: -756842084, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: 1478466686, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: 885936718, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: -45614331, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: -668059826, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: 1510737446, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    fps: 1
+    loop: 1
+  - animationId: right_walk
+    category: movement
+    frames:
+    - {fileID: 1707964312, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    - {fileID: 150046001, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    - {fileID: 1540581374, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    - {fileID: -279265310, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    - {fileID: -1004539947, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    - {fileID: 1321338456, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    - {fileID: -1884429625, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    - {fileID: 1573187566, guid: 8208981e0bb85234abcaabfb946c2f9f, type: 3}
+    fps: 1
+    loop: 1
+  - animationId: special_left_walk
+    category: movement
+    frames:
+    - {fileID: -998545, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: 1988163141, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: -1182109494, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: 1440019964, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: 1828876539, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: -1142474100, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: -382654149, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    - {fileID: 457763506, guid: 709dec8c750ee8841b65d42c9e00b8ca, type: 3}
+    fps: 2.67
+    loop: 0
+  - animationId: hug
+    category: touch
+    frames:
+    - {fileID: -1666229261, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    - {fileID: 478486752, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    - {fileID: 763360004, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    - {fileID: -429939516, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    - {fileID: 1035628534, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    - {fileID: -1711050868, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    - {fileID: -248240846, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    - {fileID: -1114078417, guid: 0117befade7d1c9499f340605c676635, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: touch_accept
+    category: touch
+    frames:
+    - {fileID: 1180841507, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    - {fileID: -245150767, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    - {fileID: -45190461, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    - {fileID: -1400102929, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    - {fileID: 476195382, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    - {fileID: 387874762, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    - {fileID: -1112573545, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    - {fileID: 450669195, guid: 93f0d3d719410ec4ba5f93a9e5e84d94, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: touch_guarded
+    category: touch
+    frames:
+    - {fileID: -803622245, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    - {fileID: 1959423103, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    - {fileID: -1798854311, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    - {fileID: -1965853206, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    - {fileID: 400459137, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    - {fileID: -1854774043, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    - {fileID: -793230131, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    - {fileID: 1857954648, guid: d8be9f0239407ef4e9567ffdd1b7280e, type: 3}
+    fps: 6
+    loop: 0
+  - animationId: touch_reject
+    category: touch
+    frames:
+    - {fileID: 1673917395, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    - {fileID: 139089221, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    - {fileID: -498104804, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    - {fileID: -2055393972, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    - {fileID: -1714612266, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    - {fileID: 2141039221, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    - {fileID: 200477079, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    - {fileID: -2063594619, guid: 7ea4e3649513c65418c9f8c97a90c8b8, type: 3}
+    fps: 6
+    loop: 0

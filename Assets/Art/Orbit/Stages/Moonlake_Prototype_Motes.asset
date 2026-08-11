@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8e87f1e76df9246b17dfd8c2aef9fe, type: 3}
+  m_Name: Moonlake_Prototype_Motes
+  m_EditorClassIdentifier: Assembly-CSharp::NexusLink.Orbit.OrbitStageDefinition
+  stageId: moonlake-proto-motes
+  regionId: moonlake
+  zoneId: starwood_trail
+  index: 2
+  title: "\u661F\u82BD\u63A0\u5149"
+  goalLabel: "\u56DE\u6536\u4E09\u679A\u932F\u4F4D\u8A18\u61B6"
+  copy: "\u6CBF\u8457\u754C\u7D0B\u627E\u4E00\u689D\u80FD\u4E00\u6B21\u7A7F\u904E\u4E09\u9EDE\u7684\u7DDA\u3002"
+  clearNarrative: "\u932F\u4F4D\u7684\u5149\u88AB\u91CD\u65B0\u6392\u56DE\u9806\u5E8F\u3002"
+  arenaRadius: 1
+  containedArena: 1
+  playerStart: {x: 0, y: 0.55}
+  pillars:
+  - x: 0
+    y: 0.05
+    r: 0.14
+  memoryMotes:
+  - x: -0.62
+    y: -0.3
+    r: 0.09
+  - x: 0.66
+    y: -0.18
+    r: 0.09
+  - x: 0.05
+    y: -0.72
+    r: 0.09
+  anchor:
+    x: 0
+    y: 0
+    r: 0
+  resonanceZone:
+    x: 0
+    y: 0
+    r: 0
+    maxSpeed: 0
+    holdSeconds: 0
+    brake: 0
+  driftFields: []
+  maxSeconds: 60
+  resonancePulses: 1
+  objectives:
+  - type: 1
+    amount: 0
+  linearDamping: 0.62
+  spinDamping: 0.55
+  restitution: 0.86
