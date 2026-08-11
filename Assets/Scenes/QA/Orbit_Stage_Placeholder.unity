@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.22, g: 0.3, b: 0.44, a: 1}
-  m_AmbientEquatorColor: {r: 0.16, g: 0.22, b: 0.32, a: 1}
-  m_AmbientGroundColor: {r: 0.08, g: 0.1, b: 0.15, a: 1}
-  m_AmbientIntensity: 0.75
+  m_AmbientSkyColor: {r: 0.68, g: 0.82, b: 0.92, a: 1}
+  m_AmbientEquatorColor: {r: 0.52, g: 0.66, b: 0.66, a: 1}
+  m_AmbientGroundColor: {r: 0.28, g: 0.34, b: 0.3, a: 1}
+  m_AmbientIntensity: 0.68
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 73324b55f67f54c7bbf43204788b8bbe, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -162,8 +162,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 1
-  m_Color: {r: 0.86, g: 0.93, b: 1, a: 1}
-  m_Intensity: 1.35
+  m_Color: {r: 1, g: 0.96, b: 0.88, a: 1}
+  m_Intensity: 1.45
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -172,7 +172,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.72
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -272,8 +272,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407506690}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4848096, y: -0, z: -0, w: 0.8746197}
-  m_LocalPosition: {x: 0, y: 25.416597, z: -15.882053}
+  m_LocalRotation: {x: 0.16835618, y: -0, z: -0, w: 0.98572624}
+  m_LocalPosition: {x: 0, y: 10, z: -26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -288,7 +288,7 @@ Camera:
   m_GameObject: {fileID: 1407506690}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.07, g: 0.1, b: 0.17, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -311,8 +311,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.05
-  far clip plane: 120
-  field of view: 40
+  far clip plane: 200
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -384,6 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734315320}
   - component: {fileID: 1734315319}
+  - component: {fileID: 1734315321}
   m_Layer: 0
   m_Name: Orbit_Stage
   m_TagString: Untagged
@@ -423,6 +424,28 @@ Transform:
   - {fileID: 2082528411}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734315321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734315318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1ba4c6b8aef2947bfa56d6d1aaa33d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NexusLink.Orbit.OrbitArenaBackdrop
+  arenaWorldRadius: 4.5
+  waterDrop: 1.4
+  waterColor: {r: 0.13, g: 0.58, b: 0.62, a: 0.94}
+  stoneColor: {r: 0.7, g: 0.72, b: 0.75, a: 1}
+  mossColor: {r: 0.42, g: 0.6, b: 0.4, a: 1}
+  foliageColor: {r: 0.44, g: 0.62, b: 0.42, a: 1}
+  foliageDeepColor: {r: 0.28, g: 0.46, b: 0.32, a: 1}
+  woodColor: {r: 0.42, g: 0.31, b: 0.24, a: 1}
+  goldColor: {r: 0.95, g: 0.8, b: 0.42, a: 1}
+  waterfallColor: {r: 0.62, g: 0.92, b: 0.95, a: 0.8}
 --- !u!1 &2082528410
 GameObject:
   m_ObjectHideFlags: 0

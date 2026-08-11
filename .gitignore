@@ -44,6 +44,7 @@ Thumbs.db
 # Timestamped scene snapshots taken before every rebuild, and the preview
 # renders / build reports it writes. Both are reproducible from the builder.
 Assets/Scenes/QA/_Backups/
+Assets/Scenes/QA/_Backups.meta
 Backups/
 output/
 Assets/Screenshots/
