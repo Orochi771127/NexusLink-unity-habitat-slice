@@ -68,9 +68,18 @@ namespace NexusLink.Orbit
 
             var waterY = -waterDrop;
 
-            // Open water, wide enough to leave the frame on every side.
-            Primitive(root, "Backdrop_Water", PrimitiveType.Cylinder,
-                new Vector3(0f, waterY, 10f), new Vector3(76f, 0.08f, 76f), waterColor);
+            // Open water. The rippled mesh from the nature pack carries its waves
+            // in geometry, so the surface catches the key light instead of
+            // reading as one flat colour block the way a plain disc does.
+            if (Prefab(root, NatureRoot + "Water/Prefabs/UNS_Water_Detailed.prefab",
+                    "Backdrop_Water", new Vector3(0f, waterY - 0.10f, 10f),
+                    new Vector3(76f, 0.30f, 76f), Quaternion.identity, waterColor) == null)
+            {
+                Primitive(root, "Backdrop_Water", PrimitiveType.Cylinder,
+                    new Vector3(0f, waterY, 10f), new Vector3(76f, 0.08f, 76f), waterColor);
+            }
+
+            BuildFarIslands(root);
 
             // The platform's own plinth, so it reads as set into the water.
             Primitive(root, "Backdrop_Platform_Plinth", PrimitiveType.Cylinder,
@@ -87,10 +96,60 @@ namespace NexusLink.Orbit
             BuildShrineIsland(root);
 
             // Stone lanterns flanking the near corners, as in the reference.
-            BuildLantern(root, new Vector3(-(arenaWorldRadius + 1.4f), 0f, -2.4f));
-            BuildLantern(root, new Vector3(arenaWorldRadius + 1.4f, 0f, -2.4f));
+            // Placed where the crop is actually wide enough. Near the camera the
+            // portrait frame only reaches |x| 4.9, so a lantern beside the near
+            // edge of the platform is off screen no matter how good it looks in
+            // the scene view; at z=3.2 the frame opens to 6.2 while the platform
+            // has narrowed to 4.2, which leaves room for both.
+            BuildLantern(root, new Vector3(-(arenaWorldRadius + 0.8f), 0.02f, 3.2f));
+            BuildLantern(root, new Vector3(arenaWorldRadius + 0.8f, 0.02f, 3.2f));
 
             BuildFoliageRing(root);
+            BuildForegroundPaving(root);
+        }
+
+
+        /// <summary>
+        /// Small landmasses stepping back up the channel. Without them the water
+        /// between the arena and the horizon is an empty plane, which is what
+        /// makes the middle distance read as a flat colour block.
+        /// </summary>
+        void BuildFarIslands(Transform root)
+        {
+            var group = new GameObject("Backdrop_Far_Islands");
+            group.transform.SetParent(root, false);
+
+            var islands = new[]
+            {
+                new Vector4(-13.5f, 26f, 7.5f, 1.5f),
+                new Vector4(12.0f, 31f, 6.2f, 1.2f),
+                new Vector4(-4.0f, 36f, 5.4f, 1.0f),
+                new Vector4(7.5f, 41f, 4.6f, 0.85f)
+            };
+
+            for (var i = 0; i < islands.Length; i++)
+            {
+                var island = islands[i];
+                var fade = 1f - i * 0.16f;
+                Primitive(group.transform, "Far_Island_Rock_" + i.ToString("00"), PrimitiveType.Cylinder,
+                    new Vector3(island.x, -waterDrop + island.w * 0.4f, island.y),
+                    new Vector3(island.z, island.w * 0.4f, island.z * 0.72f),
+                    Color.Lerp(stoneColor, waterColor, 1f - fade));
+                Primitive(group.transform, "Far_Island_Grass_" + i.ToString("00"), PrimitiveType.Cylinder,
+                    new Vector3(island.x, -waterDrop + island.w * 0.72f, island.y),
+                    new Vector3(island.z * 0.9f, island.w * 0.12f, island.z * 0.64f),
+                    Color.Lerp(mossColor, waterColor, 1f - fade));
+
+                for (var t = 0; t < 3; t++)
+                {
+                    Prefab(group.transform, "Assets/Polytope Studio/Lowpoly_Environments/Prefabs/Trees/PT_Pine_Tree_03_green.prefab",
+                        "Far_Island_Pine_" + i.ToString("00") + "_" + t,
+                        new Vector3(island.x + (t - 1) * island.z * 0.26f, -waterDrop + island.w * 0.78f, island.y),
+                        new Vector3(1.1f * fade, 2.1f * fade, 1.1f * fade),
+                        Quaternion.Euler(0f, t * 71f, 0f),
+                        Color.Lerp(foliageColor, waterColor, 1f - fade));
+                }
+            }
         }
 
         /// <summary>A waterfall cliff mass on one side, framing the arena.</summary>
@@ -238,6 +297,58 @@ namespace NexusLink.Orbit
                         position + Vector3.up * scale * 0.3f,
                         new Vector3(scale, scale * 0.7f, scale),
                         i % 3 == 0 ? foliageDeepColor : foliageColor);
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Cobbled apron along the near edge. The reference closes its foreground
+        /// with paving and small flowers rather than letting the water run to the
+        /// bottom of the crop.
+        /// </summary>
+        void BuildForegroundPaving(Transform root)
+        {
+            var group = new GameObject("Backdrop_Foreground_Paving");
+            group.transform.SetParent(root, false);
+            var random = new System.Random(9182);
+
+            // A mossy bed, so the gaps between stones read as ground rather than
+            // as more stone. The first pass used 2.1-unit slabs in near-white,
+            // which turned the bottom quarter of the crop into a grey slab.
+            Primitive(group.transform, "Paving_Bed", PrimitiveType.Cube,
+                new Vector3(0f, -0.24f, -(arenaWorldRadius + 6.6f)),
+                new Vector3(34f, 0.30f, 9.0f), mossColor * 0.82f);
+
+            for (var row = 0; row < 6; row++)
+            {
+                var z = -(arenaWorldRadius + 3.0f) - row * 0.86f;
+                var count = 26 + row * 2;
+                for (var i = 0; i < count; i++)
+                {
+                    var stagger = (row % 2) * 0.44f;
+                    var x = (i - (count - 1) * 0.5f) * 0.98f + stagger;
+                    var jitter = (float)random.NextDouble();
+                    var size = 0.62f + jitter * 0.22f;
+                    var shade = 0.46f + (float)random.NextDouble() * 0.16f;
+                    var cobble = Primitive(group.transform, "Paving_" + row + "_" + i.ToString("00"), PrimitiveType.Cube,
+                        new Vector3(x, -0.09f, z + jitter * 0.18f),
+                        new Vector3(size, 0.14f, size * 0.80f),
+                        new Color(shade, shade + 0.03f, shade + 0.05f));
+                    cobble.localRotation = Quaternion.Euler(0f, jitter * 24f - 12f, 0f);
+
+                    if (i % 3 == 2)
+                    {
+                        Primitive(group.transform, "Paving_Moss_" + row + "_" + i.ToString("00"), PrimitiveType.Sphere,
+                            new Vector3(x + 0.5f, -0.04f, z + 0.42f),
+                            new Vector3(0.62f, 0.14f, 0.52f), mossColor);
+                    }
+                    if (i % 9 == 4)
+                    {
+                        Primitive(group.transform, "Paving_Flower_" + row + "_" + i.ToString("00"), PrimitiveType.Sphere,
+                            new Vector3(x - 0.4f, 0.02f, z - 0.35f), Vector3.one * 0.17f,
+                            (i + row) % 2 == 0 ? new Color(0.62f, 0.82f, 0.96f) : new Color(0.97f, 0.95f, 0.99f));
+                    }
                 }
             }
         }

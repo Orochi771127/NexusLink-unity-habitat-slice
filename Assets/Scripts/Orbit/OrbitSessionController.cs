@@ -220,6 +220,35 @@ namespace NexusLink.Orbit
                 gem.localRotation = Quaternion.Euler(0f, i * 45f + 45f, 0f);
             }
 
+            // Meander band cut into the rim, and a lotus boss at the near and far
+            // points, as the reference carries them.
+            for (var i = 0; i < 48; i++)
+            {
+                var angle = i / 48f * Mathf.PI * 2f;
+                var r = fieldRadius + 0.46f;
+                var tile = CreatePrimitiveAt(root, "Orbit_Rim_Meander_" + i.ToString("00"), PrimitiveType.Cube,
+                    new Vector3(Mathf.Sin(angle) * r, fieldHeight - 0.02f, Mathf.Cos(angle) * r),
+                    new Vector3(0.10f, 0.03f, i % 2 == 0 ? 0.40f : 0.24f),
+                    i % 2 == 0 ? new Color(0.60f, 0.58f, 0.52f) : new Color(0.80f, 0.78f, 0.70f));
+                tile.localRotation = Quaternion.Euler(0f, -angle * Mathf.Rad2Deg, 0f);
+            }
+
+            for (var side = 0; side < 2; side++)
+            {
+                var z = (side == 0 ? 1f : -1f) * (fieldRadius + 0.52f);
+                var lotus = new GameObject("Orbit_Rim_Lotus_" + side);
+                lotus.transform.SetParent(root, false);
+                lotus.transform.localPosition = new Vector3(0f, fieldHeight + 0.02f, z);
+                for (var petal = 0; petal < 3; petal++)
+                {
+                    var petalTransform = CreatePrimitiveAt(lotus.transform, "Petal_" + petal, PrimitiveType.Cube,
+                        new Vector3(0f, petal * 0.05f, 0f),
+                        new Vector3(0.74f - petal * 0.20f, 0.06f, 0.74f - petal * 0.20f),
+                        new Color(0.96f, 0.83f, 0.44f), new Color(0.42f, 0.32f, 0.10f));
+                    petalTransform.localRotation = Quaternion.Euler(0f, 45f * petal, 0f);
+                }
+            }
+
             DrawRing(root, "Orbit_Guide_Outer", fieldRadius * 0.94f, new Color(0.95f, 0.86f, 0.55f, 0.80f), 0.035f);
             DrawRing(root, "Orbit_Guide_Mid", fieldRadius * 0.62f, new Color(0.88f, 0.92f, 0.96f, 0.42f), 0.025f);
             DrawRing(root, "Orbit_Guide_Inner", fieldRadius * 0.30f, new Color(0.88f, 0.92f, 0.96f, 0.32f), 0.02f);
