@@ -434,7 +434,7 @@ Canvas:
   m_GameObject: {fileID: 784718690}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1407506692}
   m_PlaneDistance: 1.2
   m_PixelPerfect: 0
@@ -588,6 +588,7 @@ GameObject:
   - component: {fileID: 1734315320}
   - component: {fileID: 1734315319}
   - component: {fileID: 1734315321}
+  - component: {fileID: 1734315322}
   m_Layer: 0
   m_Name: Orbit_Stage
   m_TagString: Untagged
@@ -641,6 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1ba4c6b8aef2947bfa56d6d1aaa33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NexusLink.Orbit.OrbitArenaBackdrop
+  framingCamera: {fileID: 1407506692}
   arenaWorldRadius: 4.5
   waterDrop: 1.4
   waterColor: {r: 0.13, g: 0.58, b: 0.62, a: 0.94}
@@ -651,6 +653,28 @@ MonoBehaviour:
   woodColor: {r: 0.42, g: 0.31, b: 0.24, a: 1}
   goldColor: {r: 0.95, g: 0.8, b: 0.42, a: 1}
   waterfallColor: {r: 0.62, g: 0.92, b: 0.95, a: 0.8}
+--- !u!114 &1734315322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734315318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc4cdabb3bf12449a86f1624a9b01eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NexusLink.Tools.PortraitFramingGuide
+  targetCamera: {fileID: 1407506692}
+  outputResolution: {x: 1080, y: 1920}
+  groundHeight: 0
+  nearDepth: -14
+  farDepth: 34
+  rulerCount: 7
+  inspectRoot: {fileID: 1734315320}
+  footprintColor: {r: 0.35, g: 0.95, b: 1, a: 0.9}
+  rulerColor: {r: 0.35, g: 0.95, b: 1, a: 0.35}
+  offFrameColor: {r: 1, g: 0.35, b: 0.35, a: 0.95}
 --- !u!1 &2082528410
 GameObject:
   m_ObjectHideFlags: 0

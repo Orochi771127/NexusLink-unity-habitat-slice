@@ -26,6 +26,9 @@ namespace NexusLink.Orbit
         const string NatureRoot = "Assets/InnerverseInteractive/Ultimate Nature – Starter/Environment/";
 
         [Header("Layout")]
+        [Tooltip("Camera the portrait crop is measured against. Falls back to Camera.main.")]
+        public Camera framingCamera;
+
         [Tooltip("Radius of the arena platform this backdrop frames.")]
         public float arenaWorldRadius = 4.5f;
 
@@ -43,6 +46,30 @@ namespace NexusLink.Orbit
         public Color waterfallColor = new Color(0.62f, 0.92f, 0.95f, 0.80f);
 
         bool _rebuildQueued;
+
+
+        /// <summary>Camera the framing is judged against.</summary>
+        Camera FramingCamera()
+        {
+            return framingCamera != null ? framingCamera : Camera.main;
+        }
+
+        /// <summary>
+        /// Half-width of the portrait crop on the ground at a given depth. The
+        /// same relation <see cref="NexusLink.Tools.PortraitFramingGuide"/> draws;
+        /// duplicated here so the builder can size itself without depending on an
+        /// authoring component being present in the scene.
+        /// </summary>
+        static float CropHalfWidthAt(Camera camera, float worldZ, float aspect = 1080f / 1920f)
+        {
+            if (camera == null) return 12f;
+            var origin = camera.transform.position;
+            var halfV = camera.fieldOfView * 0.5f * Mathf.Deg2Rad;
+            var halfH = Mathf.Atan(Mathf.Tan(halfV) * aspect);
+            var forward = Mathf.Abs(worldZ - origin.z);
+            var height = origin.y;
+            return Mathf.Sqrt(forward * forward + height * height) * Mathf.Tan(halfH);
+        }
 
         void OnEnable() { Build(); }
 
@@ -316,14 +343,21 @@ namespace NexusLink.Orbit
             // A mossy bed, so the gaps between stones read as ground rather than
             // as more stone. The first pass used 2.1-unit slabs in near-white,
             // which turned the bottom quarter of the crop into a grey slab.
+            var bedZ = -(arenaWorldRadius + 6.6f);
             Primitive(group.transform, "Paving_Bed", PrimitiveType.Cube,
-                new Vector3(0f, -0.24f, -(arenaWorldRadius + 6.6f)),
-                new Vector3(34f, 0.30f, 9.0f), mossColor * 0.82f);
+                new Vector3(0f, -0.24f, bedZ),
+                new Vector3(CropHalfWidthAt(FramingCamera(), bedZ) * 2f + 6f, 0.30f, 9.0f),
+                mossColor * 0.82f);
 
+            // Cobbles are laid to the crop, not to a fixed count. A flat run of
+            // 36 per row spans +/-17 while the frame at that depth is under 6
+            // wide, so nine tenths of them were generated only to be culled.
+            var camera = FramingCamera();
             for (var row = 0; row < 6; row++)
             {
                 var z = -(arenaWorldRadius + 3.0f) - row * 0.86f;
-                var count = 26 + row * 2;
+                var halfWidth = CropHalfWidthAt(camera, z) + 1.2f;
+                var count = Mathf.Clamp(Mathf.CeilToInt(halfWidth * 2f / 0.98f), 6, 40);
                 for (var i = 0; i < count; i++)
                 {
                     var stagger = (row % 2) * 0.44f;
